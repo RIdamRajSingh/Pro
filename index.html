@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be Mine?</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: inline-block;
+            animation: fadeIn 1s ease-in;
+        }
+        h1 {
+            color: #ff6f91;
+            font-size: 36px;
+        }
+        button {
+            background-color: #ff6f91;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff4e72;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card" id="proposal-card">
+    <h1>Will you be mine? 💖</h1>
+    <button id="yesBtn" onclick="handleYes()">Yes 💕</button>
+    <button id="noBtn" onclick="handleNo()">No 🙈</button>
+</div>
+
+<script>
+    function handleYes() {
+        document.getElementById('proposal-card').innerHTML = `
+            <h1>Yay! You made my day! 💐💖</h1>
+            <p>You are the most amazing person ever!</p>
+        `;
+    }
+
+    function handleNo() {
+        const noBtn = document.getElementById('noBtn');
+        noBtn.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
